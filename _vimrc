@@ -78,6 +78,7 @@ set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
 set autoindent					" always set autoindenting on
 "set list listchars=tab:>-,trail:.,extends:>
 set list listchars=tab:▸\ ,trail:.,eol:¬
+set expandtab					" on pressing tab, insert 4 spaces
 " }}}
 
 " Searching {{{
