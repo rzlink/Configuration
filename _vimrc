@@ -3,6 +3,9 @@
 "
 
 " Plugin {{{
+" vim-plug
+" A minimalist Vim plugin manager. https://github.com/junegunn/vim-plug
+
 call plug#begin('$HOME/vimfiles/plugged')
 Plug 'scrooloose/nerdtree'              " A tree explorer plugin for vim.
 Plug 'kien/ctrlp.vim'                   " Fuzzy file, buffer, mru, tag, etc finder.
@@ -14,6 +17,7 @@ Plug 'takac/vim-hardtime'               " Plugin to help you stop repeating the 
 Plug 'altercation/vim-colors-solarized' " Precision colorscheme for the vim text editor
 Plug 'PProvost/vim-ps1'                 " A Vim plugin for Windows PowerShell support
 call plug#end()
+
 " }}}
 
 " General {{{
