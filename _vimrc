@@ -4,93 +4,92 @@
 
 " Plugin {{{
 call plug#begin('$HOME/vimfiles/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
-Plug 'whatyouhide/vim-gotham'
-Plug 'vim-scripts/YankRing.vim'
-Plug 'itchyny/lightline.vim'
-"Plug 'easymotion/vim-easymotion'
-Plug 'wikitopian/hardmode'
-Plug 'altercation/vim-colors-solarized'
-Plug 'PProvost/vim-ps1'
+Plug 'scrooloose/nerdtree'              " A tree explorer plugin for vim.
+Plug 'kien/ctrlp.vim'                   " Fuzzy file, buffer, mru, tag, etc finder.
+Plug 'whatyouhide/vim-gotham'           " Gotham is a very dark vim colorscheme.
+Plug 'vim-scripts/YankRing.vim'         " Maintains a history of previous yanks, changes and deletes
+Plug 'itchyny/lightline.vim'            " A light and configurable statusline/tabline plugin
+Plug 'easymotion/vim-easymotion'        " Vim motions on speed!
+Plug 'takac/vim-hardtime'               " Plugin to help you stop repeating the basic movement keys
+Plug 'altercation/vim-colors-solarized' " Precision colorscheme for the vim text editor
+Plug 'PProvost/vim-ps1'                 " A Vim plugin for Windows PowerShell support
 call plug#end()
 " }}}
 
 " General {{{
-set history=100					" remember more commands and search history
+set history=100                 " remember more commands and search history
 filetype plugin on
 filetype indent on
 set backspace=indent,eol,start
 set nocompatible
 set nowrap
-set mouse=						" disable mouse
+set mouse=                      " disable mouse
 "}}}
 
 " UI Layout {{{
-set lines=40 columns=130		" default window size
+set lines=40 columns=130        " default window size
 set laststatus=2
 " set extra options when running in GUI mode
 if has("gui_running")
-	set guioptions-=m			" remove menu bar
-	set guioptions-=T			" remove toolbar
-	set guioptions-=r			" remove rigth-hand scroll bar
-	set guioptions-=L			" remove left-hand scroll bar
-	set guioptions+=i			" use a vim icon
-	"set guioptions=			" remove all gui options
-	set guifont=Consolas:h11	" font == consolas
-	colorscheme solarized
-	set background=dark
-	"colorscheme zellner
+    set guioptions-=m           " remove menu bar
+    set guioptions-=T           " remove toolbar
+    set guioptions-=r           " remove rigth-hand scroll bar
+    set guioptions-=L           " remove left-hand scroll bar
+    set guioptions+=i           " use a vim icon
+    "set guioptions=            " remove all gui options
+    set guifont=Consolas:h11    " font == consolas
+    colorscheme solarized
+    set background=dark
+    "colorscheme zellner
 else
-	colorscheme industry
+    colorscheme industry
 endif
 
 "set textwidth=79
 set colorcolumn=85
-syntax enable					" enable syntax processing
-"set formatoptions=qrn1			" TODO: understand the usage
+syntax enable                   " enable syntax processing
+"set formatoptions=qrn1         " TODO: understand the usage
 set encoding=utf8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-set number						" always show line numbers
-set relativenumber				" use relative number
-set showcmd						" show command in bottom bar
-set cursorline					" highlight current line (depending on your colorscheme)
+set number                      " always show line numbers
+set relativenumber              " use relative number
+set showcmd                     " show command in bottom bar
+set cursorline                  " highlight current line (depending on your colorscheme)
 "
 " highlight need to put after the colorscheme and syntax enable, otherwise it
 " will get overwrite
 highlight CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
-set ruler						" always show current position
-set wildmenu					" visual autocomplete for Command Menu
-set showmatch					" highlight [{()}], default on
+set ruler                       " always show current position
+set wildmenu                    " visual autocomplete for Command Menu
+set showmatch                   " highlight [{()}], default on
 
 " }}}
 
 " Spaces & Tabs {{{
 " default vim settings 'ts=8, sts=0, sw=8, noexpandtab'
-set tabstop=4					" number of visual spaces per TAB
-set softtabstop=4				" number of spaces in tab when editing
-"set expandtab					" use spaces for tabs
-set shiftwidth=4 				" number of spaces to use for autoindenting
-set smarttab					" insert tabs on the start of a line according to
-								" 		shiftwidth, not tabstop
-set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
-set autoindent					" always set autoindenting on
+set tabstop=4                   " number of visual spaces per TAB
+set softtabstop=4               " number of spaces in tab when editing
+set expandtab                   " use spaces for tabs
+set shiftwidth=4                " number of spaces to use for autoindenting
+set smarttab                    " insert tabs on the start of a line according to
+                                "       shiftwidth, not tabstop
+set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
+set autoindent                  " always set autoindenting on
 "set list listchars=tab:>-,trail:.,extends:>
 set list listchars=tab:▸\ ,trail:.,eol:¬
-set expandtab					" on pressing tab, insert 4 spaces
 " }}}
 
 " Searching {{{
-set incsearch					" show search matches as you type
-set hlsearch					" highlight search terms
-set smartcase					" ignore case if search pattern is all lowercase,
-								" 		case-sensitive otherwise
-set ignorecase					" ignore case when searching
+set incsearch                   " show search matches as you type
+set hlsearch                    " highlight search terms
+set smartcase                   " ignore case if search pattern is all lowercase,
+                                "       case-sensitive otherwise
+set ignorecase                  " ignore case when searching
 " }}}
 
 " Folding {{{
-set foldmethod=marker			" fold based on indent level
+set foldmethod=marker           " fold based on indent level
 " }}}
 
 " Files, backup and undo {{{
@@ -101,8 +100,8 @@ set noswapfile
 
 " Key mapping {{{
 nmap \q :nohlsearch<CR>
-let mapleader = "\<Space>"		" map leader key to <Space>
-nnoremap <Leader>o :CtrlP<CR>	" <Space>o to open a new file
+let mapleader = "\<Space>"      " map leader key to <Space>
+nnoremap <Leader>o :CtrlP<CR>   " <Space>o to open a new file
 
 " quick open up _vimrc file in a vertically split window
 nnoremap <silent> <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
@@ -111,7 +110,7 @@ nnoremap <silent> <leader>el :source $MYVIMRC<CR>
 noremap! <F1> <Esc>
 nnoremap <silent> <F3> :YRShow<CR>
 inoremap <silent> <F3> <ESC>:YRShow<CR>
-nnoremap <silent> <F4> :NERDTreeToggle<CR>	" NerdTree Toggle (file browser)
+nnoremap <silent> <F4> :NERDTreeToggle<CR>  " NerdTree Toggle (file browser)
 inoremap <silent> <F4> <ESC>:NERDTreeToggle<CR>
 
 " disable the arrow keys
@@ -154,33 +153,33 @@ nnoremap <silent> <leader>W :%s/\s\+$//e<CR>
 " Type z/ to toggle highlighting on/off
 nnoremap z/ :if AutoHighlightToggle()<Bar>endif<CR>
 function! AutoHighlightToggle()
-	let @/ = ''
-	if exists('#auto_highlight')
-		au! auto_highlight
-		augroup! auto_highlight
-		setl updatetime=4000
-		echo 'Highlight current word: off'
-		return 0
-	else
-		augroup auto_highlight
-			au!
-			au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
-		augroup end
-		setl updatetime=50
-		echo 'Highlight current word: ON'
-		return 1
-	endif
+    let @/ = ''
+    if exists('#auto_highlight')
+        au! auto_highlight
+        augroup! auto_highlight
+        setl updatetime=4000
+        echo 'Highlight current word: off'
+        return 0
+    else
+        augroup auto_highlight
+            au!
+            au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
+        augroup end
+        setl updatetime=50
+        echo 'Highlight current word: ON'
+        return 1
+    endif
 endfunction
 
 " toggle line number and relative line number
 nnoremap <leader> l :call NumberToggle()<CR>
 function! NumberToggle()
-	if(&nu == 1)
-		set nu!
-		set rnu
-	else
-		set nornu
-		set nu
-	endif
+    if(&nu == 1)
+        set nu!
+        set rnu
+    else
+        set nornu
+        set nu
+    endif
 endfunction
 " }}}
