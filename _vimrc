@@ -8,8 +8,15 @@
 
 call plug#begin('$HOME/vimfiles/plugged')
 Plug 'scrooloose/nerdtree'              " A tree explorer plugin for vim.
-Plug 'kien/ctrlp.vim'                   " Fuzzy file, buffer, mru, tag, etc finder.
-Plug 'whatyouhide/vim-gotham'           " Gotham is a very dark vim colorscheme.
+"Plug 'kien/ctrlp.vim'                   " Fuzzy file, buffer, mru, tag, etc finder.
+"Plug 'whatyouhide/vim-gotham'           " Gotham is a very dark vim colorscheme.
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'                 " fzf
+
+Plug 'tpope/vim-fugitive'               " A Git wrapper so awesome
+Plug 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the gutter 
+                                        " (sign column) and stages/undoes hunks.
+
 Plug 'vim-scripts/YankRing.vim'         " Maintains a history of previous yanks, changes and deletes
 Plug 'itchyny/lightline.vim'            " A light and configurable statusline/tabline plugin
 Plug 'easymotion/vim-easymotion'        " Vim motions on speed!
@@ -22,6 +29,7 @@ call plug#end()
 
 " General {{{
 set history=100                 " remember more commands and search history
+set updatetime=100
 filetype plugin on
 filetype indent on
 set backspace=indent,eol,start
@@ -42,7 +50,8 @@ if has("gui_running")
     set guioptions+=i           " use a vim icon
     "set guioptions=            " remove all gui options
     set guifont=Consolas:h11    " font == consolas
-    colorscheme solarized
+    "colorscheme solarized
+    colorscheme skittles_berry
     set background=dark
     "colorscheme zellner
 else
