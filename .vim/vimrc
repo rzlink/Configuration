@@ -1,0 +1,9 @@
+let myscripts  = [ '10-common-set.vim'
+	       \ , '20-functions.vim'
+	       \ ]
+
+let myscriptdir = 'vimrc.d'
+
+for myscript in myscripts
+    execute 'runtime!' myscriptdir . '/' . myscript
+endfor
