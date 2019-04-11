@@ -1,9 +1,9 @@
-let myscripts  = [ '10-common-set.vim'
-	       \ , '20-functions.vim'
-	       \ ]
+let s:scripts  = [ '10-common-set.vim'
+               \ , '20-functions.vim'
+               \ ]
 
-let myscriptdir = 'vimrc.d'
+let s:scriptdir = 'vimrc.d'
 
-for myscript in myscripts
-    execute 'runtime!' myscriptdir . '/' . myscript
+for s:script in s:scripts
+    execute 'runtime!' s:scriptdir . '/' . s:script
 endfor
