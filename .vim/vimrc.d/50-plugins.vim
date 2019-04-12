@@ -11,5 +11,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
+Plug 'scrooloose/nerdtree'
+
+Plug 'airblade/vim-gitgutter'
+
 " Initialize plugin system
 call plug#end()
