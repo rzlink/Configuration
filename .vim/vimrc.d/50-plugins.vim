@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'               " A Git wrapper so awesome
 
 " Initialize plugin system
 call plug#end()
