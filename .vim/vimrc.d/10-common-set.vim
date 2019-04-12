@@ -1,4 +1,4 @@
-﻿" This option has the effect of making Vim either more Vi-compatible, or
+" This option has the effect of making Vim either more Vi-compatible, or
 " make Vim behave in a more useful way.
 set nocompatible
 
@@ -216,3 +216,4 @@ syntax enable
 " file name and sometimes by inspecting the contents of the file for specific
 " text.
 filetype indent plugin on
+
