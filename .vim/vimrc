@@ -1,10 +1,1 @@
-let s:scripts  = [ '10-common-set.vim'
-               \ , '20-functions.vim'
-               \ ]
-
-let s:scriptdir = 'vimrc.d'
-
-for s:script in s:scripts
-    echo s:scriptdir . '/' . s:script
-    runtime! s:scriptdir . '/' . s:script
-endfor
+runtime! vimrc.d/*.vim
