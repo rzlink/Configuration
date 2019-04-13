@@ -15,7 +15,7 @@
     extendedRegexp = true
 
 [credential]
-    helper = store
+    helper = manager
 
 [include]
   path = gitalias.txt
@@ -39,7 +39,8 @@
     cmd = \"C:/Program Files/Beyond Compare 4/BComp.exe\" $LOCAL $REMOTE
 
 [merge]
-    tool = bc4
+    tool = vimdiff3
+    conflictstyle = diff3
 
 [mergetool "kdiff3"]
     cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" $BASE $LOCAL $REMOTE -o $MERGED
@@ -48,3 +49,7 @@
 
 [mergetool "bc4"]
     cmd = \"C:/Program Files/Beyond Compare 4/BComp.exe\" $LOCAL $REMOTE $BASE $MERGED
+
+[mergetool "vimdiff3"]
+    cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    prompt = false 
