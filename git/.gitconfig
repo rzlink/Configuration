@@ -17,10 +17,11 @@
 [credential]
     helper = store
 
+[include]
+  path = gitalias.txt
+
 [alias]
     logs = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=relative
-    precommit = diff --cached --diff-algorithm=minimal -w
-    g = grep --break --heading --line-number
 
 [diff]
     tool = bc4
