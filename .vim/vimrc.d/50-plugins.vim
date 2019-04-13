@@ -16,5 +16,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'               " A Git wrapper so awesome
 
+" color schemes
+Plug 'w0ng/vim-hybrid'
+Plug 'crusoexia/vim-monokai'
+Plug 'tomasr/molokai'
+
 " Initialize plugin system
 call plug#end()

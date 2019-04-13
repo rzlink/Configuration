@@ -1,0 +1,48 @@
+[credential]
+    helper = store
+
+[diff]
+    tool = vimdiff
+
+[difftool "kdiff3"]
+    cmd = \"C:/Program Files/KDiff3/kdiff3\" \"$LOCAL\" \"$REMOTE\"
+
+[difftool "vim"]
+    cmd = \"C:/Program Files/KDiff3/kdiff3\" \"$LOCAL\" \"$REMOTE\"
+
+[difftool "vsdiffmerge"]
+    cmd = "'C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/vsdiffmerge.exe'" "$LOCAL" "$REMOTE" //t
+    keepbackup = false
+    trustexistcode = true
+
+[difftool "bc3"]
+    cmd = \"C:/Program Files (x86)/Beyond Compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE 
+
+[difftool]
+    prompt = false
+
+[merge]
+    tool = kdiff3
+
+[mergetool "kdiff3"]
+    cmd = \"C:\\Program Files/KDiff3/kdiff3\"  \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+    trustExitCode = false
+    keepBackup = false
+[mergetool "vsdiffmerge"]
+    cmd = "'C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/vsdiffmerge.exe'" "$REMOTE" "$LOCAL" "$BASE" "$MERGED" //m
+    keepbackup = false
+    trustexistcode = true
+[mergetool]
+    prompt = false
+
+[core]
+    editor = 'C:\\Program Files (x86)/Vim/vim80/gvim.exe'
+
+[alias]
+    logs = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=relative
+[user]
+    name = Dawei Wei
+    email = davwei@microsoft.com
