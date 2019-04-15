@@ -4,6 +4,15 @@
 " majority of the configuration and settings living in files spread between
 " vim/rcfiles and vim/rcplugins
 
+" This option has the effect of making Vim either more Vi-compatible, or
+" make Vim behave in a more useful way.
+set nocompatible
+
+" Sets the character encoding used inside Vim.  It applies to text in
+" the buffers, registers, Strings in expressions, text stored in the
+" viminfo file, etc.
+set encoding=utf-8
+
 " Need to set the leader before defining any leader mappings
 let mapleader = "\<Space>"
 

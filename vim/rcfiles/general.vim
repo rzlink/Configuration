@@ -1,12 +1,3 @@
-" This option has the effect of making Vim either more Vi-compatible, or
-" make Vim behave in a more useful way.
-set nocompatible
-
-" Sets the character encoding used inside Vim.  It applies to text in
-" the buffers, registers, Strings in expressions, text stored in the
-" viminfo file, etc.
-set encoding=utf-8
-
 " When 'fileencoding' is different from 'encoding', conversion will be
 " done when writing the file.
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
