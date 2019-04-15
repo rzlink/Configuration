@@ -78,4 +78,4 @@ set cursorcolumn
 "       2: always
 set laststatus=2
 
-colorscheme monokai
+colorscheme molokai
