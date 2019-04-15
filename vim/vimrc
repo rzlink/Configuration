@@ -1,1 +1,16 @@
-runtime! vimrc.d/*.vim
+" Vimrc
+"
+" This file contains the minimal settings to set the foundation, with the
+" majority of the configuration and settings living in files spread between
+" vim/rcfiles and vim/rcplugins
+
+" Need to set the leader before defining any leader mappings
+let mapleader = "\<Space>"
+
+call plug#begin('~/.vim/plugged')
+
+runtime! rcplugins/*.vim
+
+call plug#end()
+
+runtime! rcfiles/*.vim
