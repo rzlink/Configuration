@@ -9,5 +9,6 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
 noremap <silent> <leader>he :Helptags<cr>
 
 nnoremap <C-p> :Files<cr>
+nnoremap <leader>o :Files<cr>
 
 " vim:ft=vim
