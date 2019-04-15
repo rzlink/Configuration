@@ -9,6 +9,12 @@ nnoremap <silent> <S-Insert>    "*p
 imap              <C-e>         <C-o>$
 imap              <C-a>         <C-o>0
 
+" Quick jumping between splits
+map               <C-J>         <C-W>j
+map               <C-K>         <C-W>k
+map               <C-H>         <C-W>h
+map               <C-L>         <C-W>l
+
 " Emacs-like bindings in the command line from `:h emacs-keys`
 cnoremap          <C-a>         <Home>
 cnoremap          <C-b>         <Left>
