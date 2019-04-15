@@ -48,4 +48,3 @@ nnoremap          g*            g*zz
 nnoremap          g#            g#zz
 
 nmap \q :nohlsearch<CR>
-

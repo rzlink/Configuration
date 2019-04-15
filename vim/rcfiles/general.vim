@@ -98,5 +98,3 @@ syntax enable
 " file name and sometimes by inspecting the contents of the file for specific
 " text.
 filetype indent plugin on
-
-
