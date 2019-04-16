@@ -63,14 +63,23 @@ nnoremap <silent> <Leader>fr    :browse oldfiles<CR>
 " Copy current file path
 nnoremap <silent> <Leader>fy    :let @+ = expand("%:p")<CR>
 
+" Split window below
+nnoremap <silent> <Leader>w-    :belowright split<CR>
+
+" Split window to right
+nnoremap <silent> <Leader>w/    :belowright vsplit<CR>
+
 " Close current window
-nnoremap <silent> <Leader>qf    :close<CR>
+nnoremap <silent> <Leader>wd    :close<CR>
+
+" Maximize
+nnoremap <silent> <Leader>wm    <C-w>_<C-w>\|
 
 " Close all window
 nnoremap <silent> <Leader>qq    :qall<CR>
 
 " yank all content to system clipboard
-nnoremap <silent> <Leader>ay    :%y+<CR>
+nnoremap <silent> <Leader>ya    :%y+<CR>
 
 " center search results
 nnoremap          n             nzz
