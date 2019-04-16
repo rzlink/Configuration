@@ -42,6 +42,33 @@ nnoremap <silent> <Leader>sc    :e<CR>:setlocal buftype=nofile<CR>
                                \:setlocal nobuflisted<CR>
                                \:setlocal noswapfile<CR>
 
+" Quick open (show current buffers)
+nnoremap <silent> <Leader>bb    :ls<CR>
+
+" Delete active buffer
+nnoremap <silent> <Leader>bd    :bdelete<CR>
+
+" Wipeout active buffer
+nnoremap <silent> <Leader>bw    :bwipeout<CR>
+
+" Next buffer
+nnoremap <silent> <Leader>bn    :bnext<CR>
+
+" Previous buffer
+nnoremap <silent> <Leader>bp    :bprevious<CR>
+
+" Open recent (show recent files)
+nnoremap <silent> <Leader>fr    :browse oldfiles<CR>
+
+" Copy current file path
+nnoremap <silent> <Leader>fy    :let @+ = expand("%:p")<CR>
+
+" Close current window
+nnoremap <silent> <Leader>qf    :close<CR>
+
+" Close all window
+nnoremap <silent> <Leader>qq    :qall<CR>
+
 " yank all content to system clipboard
 nnoremap <silent> <Leader>ay    :%y+<CR>
 
