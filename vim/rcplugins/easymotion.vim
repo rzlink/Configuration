@@ -2,12 +2,15 @@
 
 Plug 'easymotion/vim-easymotion'
 
+" Disable default mappings
+let g:EasyMotion_do_mapping = 0
+
 " s{char}{char} to move to {char}{char}
 nmap              s             <Plug>(easymotion-overwin-f2)
 
 " <Leader>f{char} to move to {char}
-map      <silent> <Leader>jj    <Plug>(easymotion-bd-f)
-map      <silent> <Leader>jj    <Plug>(easymotion-overwin-f)
+map      <silent> <Leader>jj    <Plug>(easymotion-j)
+map      <silent> <Leader>jk    <Plug>(easymotion-k)
 
 " Move to line
 map      <silent> <Leader>jl    <Plug>(easymotion-bd-jk)
