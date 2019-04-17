@@ -69,17 +69,39 @@ nnoremap <silent> <Leader>w-    :belowright split<CR>
 " Split window to right
 nnoremap <silent> <Leader>w/    :belowright vsplit<CR>
 
+" Window resizeing {{{2
+" Maximize
+nnoremap <silent> <Leader>wm    <C-w>_<C-w>\|
+
+" Make all windows equally high and wide
+nnoremap          <M-=>         <C-w>=
+
+" Decrease current window width by 1
+nnoremap          <M-,>         <C-w><lt>
+
+" Increase current window width by 1
+nnoremap          <M-.>         <C-w>>
+" }}}
+
 " Close current window
 nnoremap <silent> <Leader>wd    :close<CR>
 
-" Maximize
-nnoremap <silent> <Leader>wm    <C-w>_<C-w>\|
+" Only keep current window
+nnoremap <silent> <Leader>wo    :only<CR>
 
 " Close all window
 nnoremap <silent> <Leader>qq    :qall<CR>
 
 " yank all content to system clipboard
 nnoremap <silent> <Leader>ya    :%y+<CR>
+
+nnoremap <silent> <Leader>da    :%d<CR>
+
+" strip all trailing whitespace in the current file
+nnoremap <silent> <leader>W :%s/\s\+$//e<CR>:let @/=''<CR>:%s/\n\{3,}/\r\r/e<CR>
+
+" clear the search highlight
+nmap     <silent> \q            :nohlsearch<CR>
 
 " center search results
 nnoremap          n             nzz
@@ -89,4 +111,6 @@ nnoremap          #             #zz
 nnoremap          g*            g*zz
 nnoremap          g#            g#zz
 
-nmap \q :nohlsearch<CR>
+" move lines in normal mode
+nnoremap <silent> <s-j>         :m +1<cr>
+nnoremap <silent> <s-k>         :m -2<cr>

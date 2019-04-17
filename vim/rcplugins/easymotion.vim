@@ -18,6 +18,6 @@ nmap     <silent> <Leader>jl    <Plug>(easymotion-overwin-line)
 
 " Move to word
 map      <silent> <Leader>jw    <Plug>(easymotion-bd-w)
-map      <silent> <Leader>jw    <Plug>(easymotion-overwin-w)
+nmap     <silent> <Leader>jw    <Plug>(easymotion-overwin-w)
 
 " vim:ft=vim

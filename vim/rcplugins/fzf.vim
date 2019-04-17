@@ -44,4 +44,5 @@ let g:rg_command = '
             \ --glob "!{.git}/*" '
 
 command! -bang -nargs=* Find call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* Ack call fzf#vim#ag(<q-args>, {'down': '40%'})
 " vim:ft=vim
