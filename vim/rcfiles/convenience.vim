@@ -5,17 +5,45 @@ vnoremap          p             <Esc>:let current_reg = @"<CR>gvdi<C-R>
 nnoremap <silent> <S-Insert>    "*p
 "nnoremap <silent> <F2>          :wa<Bar>exe "mksession! " . v:this_session<CR>
 
-" Emacs-like bindings in insert mode
-imap              <C-e>         <C-o>$
-imap              <C-a>         <C-o>0
+" Emacs-like bindings in insert mode {{{1
+" move to beginning of line
+inoremap          <C-a>         <C-o>0
 
-" Quick jumping between splits
-map               <C-J>         <C-W>j
-map               <C-K>         <C-W>k
-map               <C-H>         <C-W>h
-map               <C-L>         <C-W>l
+" move to end of line
+inoremap          <C-e>         <C-o>$
 
-" Emacs-like bindings in the command line from `:h emacs-keys`
+" forward (right) one character
+inoremap          <C-f>         <Right>
+
+" back (left) one character
+inoremap          <C-b>         <Left>
+
+" forward delete character
+inoremap          <C-d>         <Del>
+
+inoremap          <C-k>         <Esc>lDa
+
+" insert a copy of last deleted line
+inoremap          <C-y>         <Esc>Pa
+
+" save your work without exiting
+inoremap          <C-x><C-s>    <Esc>:w<CR>a
+
+" goto Line Number
+inoremap          <M-x>         <Esc>:
+
+" forward (right) one word
+inoremap          <M-f>         <Esc>lwi
+
+" back (left) one word
+inoremap          <M-b>         <Esc>bi
+
+inoremap          <M-S-f>       <Esc>lWi
+
+inoremap          <M-S-b>       <Esc>Bi
+" }}}
+
+" Emacs-like bindings in the command line from `:h emacs-keys` {{{1
 cnoremap          <C-a>         <Home>
 cnoremap          <C-b>         <Left>
 cnoremap          <C-f>         <Right>
@@ -25,6 +53,13 @@ cnoremap          <M-b>         <S-Left>
 cnoremap          <M-f>         <S-Right>
 cnoremap          <M-d>         <S-right><Delete>
 cnoremap          <C-g>         <C-c>
+" }}}
+
+" Quick jumping between splits
+map               <C-J>         <C-W>j
+map               <C-K>         <C-W>k
+map               <C-H>         <C-W>h
+map               <C-L>         <C-W>l
 
 " change global directory to basename of current file
 nnoremap <silent> <Leader>c     :cd %:h<CR>
@@ -112,5 +147,5 @@ nnoremap          g*            g*zz
 nnoremap          g#            g#zz
 
 " move lines in normal mode
-nnoremap <silent> <s-j>         :m +1<cr>
-nnoremap <silent> <s-k>         :m -2<cr>
+" nnoremap <silent> <s-j>         :m +1<cr>
+" nnoremap <silent> <s-k>         :m -2<cr>
