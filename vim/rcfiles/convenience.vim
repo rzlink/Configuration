@@ -6,11 +6,16 @@ nnoremap <silent> <S-Insert>    "*p
 "nnoremap <silent> <F2>          :wa<Bar>exe "mksession! " . v:this_session<CR>
 
 " Emacs-like bindings in insert mode {{{1
+" Moving Cursor {{{2
+
 " move to beginning of line
 inoremap          <C-a>         <C-o>0
 
 " move to end of line
 inoremap          <C-e>         <C-o>$
+
+" back (left) one word
+inoremap          <M-b>         <Esc>bi
 
 " forward (right) one character
 inoremap          <C-f>         <Right>
@@ -18,13 +23,16 @@ inoremap          <C-f>         <Right>
 " back (left) one character
 inoremap          <C-b>         <Left>
 
+" }}}
+
 " forward delete character
 inoremap          <C-d>         <Del>
 
+" kill-line: delete all characters from cursor to end of line
 inoremap          <C-k>         <Esc>lDa
 
 " insert a copy of last deleted line
-inoremap          <C-y>         <Esc>Pa
+"inoremap          <C-y>         <Esc>Pa
 
 " save your work without exiting
 inoremap          <C-x><C-s>    <Esc>:w<CR>a
@@ -35,8 +43,6 @@ inoremap          <M-x>         <Esc>:
 " forward (right) one word
 inoremap          <M-f>         <Esc>lwi
 
-" back (left) one word
-inoremap          <M-b>         <Esc>bi
 
 inoremap          <M-S-f>       <Esc>lWi
 
