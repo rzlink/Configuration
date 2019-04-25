@@ -15,13 +15,7 @@ endif
 " When on, the mouse pointer is hidden when characters are typed.
 set mousehide
 
-" Completion mode that is used for the character specified with
-" When 'wildmenu' is on, command-line completion operates in an enhanced
-" mode.  On pressing 'wildchar' (usually <Tab>) to invoke completion,
-" the possible matches are shown just above the command line, with the
-" first match highlighted (overwriting the status line, if there is
-" one).  Keys that show the previous/next match, such as <Tab> or
-" CTRL-P/CTRL-N, cause the highlight to move to the appropriate match.
+" Command-line completion operates in an enhanced mode.
 set wildmenu
 
 " When this option is set, the screen will not be redrawn while
@@ -30,17 +24,13 @@ set wildmenu
 " update use |:redraw|.
 set lazyredraw
 
-" Show the line and column number of the cursor position, separated by a
-" comma.
+" shows line number and column
 set ruler
 
-" Show (partial) command in the last line of the screen.  Set this
-" option off if your terminal is slow.
+" Display commands executed"
 set showcmd
 
-" When on, lines longer than the width of the window will wrap and
-" displaying continues on the next line.  When off lines will not wrap
-" and only part of long lines will be displayed.
+" Display commands executed
 set nowrap
 
 " The minimal number of columns to scroll horizontally.  Used only when
@@ -63,19 +53,13 @@ if version >= 703
     " execute "set colorcolumn=" . join(range(81,335), ',')
 endif
 
-" Highlight the screen line of the cursor with CursorLine |hl-CursorLine|.
+" Highlight current line.
 set cursorline
 
-" Highlight the screen column of the cursor with CursorColumn
-" |hl-CursorColumn|.  Useful to align text.  Will make screen redrawing
-" slower.
+" Highlight current column.
 set cursorcolumn
 
-" The value of this option influences when the last window will have a
-" status line:
-"       0: never
-"       1: only if there are at least two windows
-"       2: always
+" Always dispaly status line
 set laststatus=2
 
 colorscheme molokai
