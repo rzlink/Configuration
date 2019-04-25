@@ -1,9 +1,3 @@
-" Make p in Visual mode replace the selected text with the "" register.
-vnoremap          p             <Esc>:let current_reg = @"<CR>gvdi<C-R>
-                               \=current_reg<CR><Esc>
-
-nnoremap <silent> <S-Insert>    "*p
-
 " EMACS-LIKE BINDINGS {{{
 
 " Emacs-like bindings in insert mode {{{
@@ -59,7 +53,7 @@ cnoremap          <C-g>         <C-c>"}}}
 
 " }}}
 
-" change directory {{{
+" CHANGE DIRECTORY {{{
 
 " change global directory to basename of current file
 nnoremap <silent> <Leader>c     :cd %:h<CR>
@@ -69,14 +63,14 @@ nnoremap <silent> <Leader>lc    :lcd %:h<CR>
 
 "}}}
 
-" enable/disable spell check {{{
+" SPELL CHECK {{{
 nnoremap <silent> <Leader>s     :setlocal spell<CR>
                                \:setlocal spelllang=en<CR>
 
 nnoremap <silent> <Leader>ns    :setlocal nospell<CR>
 "}}}
 
-" vim buffers operations {{{
+" BUFFERS OPERATIONS {{{
 
 " Quick open (show current buffers)
 nnoremap <silent> <Leader>bb    :ls<CR>
@@ -95,7 +89,7 @@ nnoremap <silent> <Leader>bp    :bprevious<CR>
 
 "}}}
 
-" File operations {{{
+" FILE OPERATIONS {{{
 
 " Open recent (show recent files)
 nnoremap <silent> <Leader>fr    :browse oldfiles<CR>
@@ -117,10 +111,10 @@ map               <C-L>         <C-W>l
 " Window split {{{
 
 " Split window below
-nnoremap <silent> <Leader>w-    :belowright split<CR>
+nnoremap <silent> <Leader>w-    <C-w><C-s>
 
 " Split window to right
-nnoremap <silent> <Leader>w/    :belowright vsplit<CR>
+nnoremap <silent> <Leader>w/    <c-w><c-v>
 
 "}}}
 
@@ -169,16 +163,27 @@ nnoremap          g*            g*zz
 nnoremap          g#            g#zz
 "}}}
 
-" move lines in normal mode {{{
+" LINE MOVEMENTS {{{
 nnoremap <silent> <M-j>         :m +1<cr>
 nnoremap <silent> <M-k>         :m -2<cr>
 "}}}
 
+" YANK, PASTE AND DELETE {{{
+
 " yank all content to system clipboard
 nnoremap <silent> <Leader>ya    :%y+<CR>
+
+" Past system clipbard conent
+nnoremap <silent> <S-Insert>    "*p
 
 " delete all content
 nnoremap <silent> <Leader>da    :%d<CR>
 
+"}}}
+
+" FORMAT{{{
+
 " strip all trailing whitespace in the current file
 nnoremap <silent> <leader>W :%s/\s\+$//e<CR>:let @/=''<CR>:%s/\n\{3,}/\r\r/e<CR>
+
+"}}}
