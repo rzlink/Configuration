@@ -8,13 +8,12 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
 
 "noremap <silent> <leader>he :Helptags<cr>
 
-" <C-p> or <C-t> to search files
+" <C-p> to search files
 nnoremap <silent> <C-p>         :Files<cr>
-nnoremap <silent> <C-t>         :FZF -m<cr>
 
 " <M-p> for open buffers
 nnoremap <silent> <M-p>         :Buffers<cr>
-"
+
 " <M-S-p> for MRU
 nnoremap <silent> <M-S-p>       :History<cr>
 
