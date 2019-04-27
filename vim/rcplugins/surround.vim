@@ -1,0 +1,5 @@
+" quoting/parenthesizing made simple
+"
+Plug 'tpope/vim-surround'
+
+" vim:ft=vim
