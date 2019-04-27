@@ -41,7 +41,7 @@ set wildmode=list:full
 
 " A list of file patterns.  A file that matches with one of these
 " patterns is ignored when completing file or directory names.
-set wildignore=*.o,*.obj,*.hi,*.class,.git,submodules/**
+set wildignore=*.swp,*.zip,*.exe,.git
 
 " If on Vim will wrap long lines at a character in 'breakat' rather
 " than at the last character that fits on the screen.
