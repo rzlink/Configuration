@@ -38,6 +38,9 @@
 [difftool "bc4"]
     cmd = \"C:/Program Files/Beyond Compare 4/BComp.exe\" $LOCAL $REMOTE
 
+[difftool "winmerge"]
+    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -e $LOCAL $REMOTE
+
 [merge]
     tool = vimdiff3
     conflictstyle = diff3
@@ -52,4 +55,4 @@
 
 [mergetool "vimdiff3"]
     cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
-    prompt = false 
+    prompt = false

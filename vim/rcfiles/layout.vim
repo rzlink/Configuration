@@ -48,7 +48,7 @@ if version >= 703
     " 'colorcolumn' is a comma separated list of screen columns that are
     " highlighted with ColorColumn |hl-ColorColumn|.  Useful to align
     " text.  Will make screen redrawing slower.
-     set colorcolumn=80
+     set colorcolumn=80,100,120
     " http://blog.hanschen.org/2012/10/24/different-background-color-in-vim-past-80-columns/
     " execute "set colorcolumn=" . join(range(81,335), ',')
 endif

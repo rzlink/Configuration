@@ -52,7 +52,10 @@ set list
 
 " Strings to use in 'list' mode and for the |:list| command.  It is a
 " comma separated list of string settings.
-set list listchars=tab:▸\ ,trail:.,eol:¬
+"set listchars=tab:▸\ ,trail:.,eol:¬
+let &listchars = "tab:\u2192 ,extends:>,precedes:<,eol:\u00ac,trail:\u00b7"
+
+let &showbreak = '>'
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " The default is ".bak,~,.o,.h,.info,.swp,.obj"
@@ -61,13 +64,18 @@ set suffixes=.bak,~,.o,.h,.info,.swp,.obj
 " Print the line number in front of each line.
 set number
 
-" Show the line number relative to the line with the cursor in front of each
-" line.
+" Show the line number relative to the line.
 set relativenumber
 
 " If you start editing a new file, and the 'modeline' option is on, a number
 " of lines at the beginning and end of the file are checked for modelines.
 set modeline
+
+" don't insert a comment after hitting 'o' or 'O' in the Normal mode
+augroup vimrc-editing-formatting
+    autocmd!
+    autocmd FileType * set formatoptions-=o
+augroup END
 
 " When the 'spell' option is on spellchecking will be done for these languages.
 set spelllang=en
