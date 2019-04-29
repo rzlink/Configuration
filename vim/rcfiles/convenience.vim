@@ -187,3 +187,9 @@ nnoremap <silent> <Leader>da    :%d<CR>
 nnoremap <silent> <leader>W :%s/\s\+$//e<CR>:let @/=''<CR>:%s/\n\{3,}/\r\r/e<CR>
 
 "}}}
+
+" force use <C-h>, <C-u>, <C-w> to delete
+inoremap          <BS>          <nop>
+cnoremap          <BS>          <nop>
+inoremap          <S-BS>        <nop>
+cnoremap          <S-BS>        <nop>
