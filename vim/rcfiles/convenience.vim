@@ -166,6 +166,10 @@ nnoremap          g#            g#zz
 " LINE MOVEMENTS {{{
 nnoremap <silent> <M-j>         :m +1<cr>
 nnoremap <silent> <M-k>         :m -2<cr>
+
+" move vertically by visual line
+nnoremap          j             gj
+nnoremap          k             gk
 "}}}
 
 " YANK, PASTE AND DELETE {{{
