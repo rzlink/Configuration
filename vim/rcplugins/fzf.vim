@@ -46,6 +46,8 @@ if executable('rg')
     command! -bang -nargs=* Find call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
     command! -bang -nargs=* Ack call fzf#vim#ag(<q-args>, {'down': '25%'})
 
+    nnoremap          <M-F>         :Ack<CR>
+
 endif
 
 " vim:ft=vim

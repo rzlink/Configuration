@@ -87,6 +87,9 @@ nnoremap <silent> <Leader>bn    :bnext<CR>
 " Previous buffer
 nnoremap <silent> <Leader>bp    :bprevious<CR>
 
+" <leader><leader> is more convenient than <c-^>
+nnoremap <leader><leader>       <c-^>
+
 "}}}
 
 " FILE OPERATIONS {{{
