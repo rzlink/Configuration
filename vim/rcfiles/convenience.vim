@@ -164,8 +164,8 @@ nnoremap          g#            g#zz
 "}}}
 
 " LINE MOVEMENTS {{{
-nnoremap <silent> <M-j>         :m +1<cr>
-nnoremap <silent> <M-k>         :m -2<cr>
+nnoremap <silent> <M-Down>      :m +1<cr>
+nnoremap <silent> <M-Up>        :m -2<cr>
 
 " move vertically by visual line
 nnoremap          j             gj
