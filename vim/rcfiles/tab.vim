@@ -16,3 +16,6 @@ set shiftwidth=4
 
 " Use 4 spaces for each step of (auto)indent.
 set shiftwidth=4
+
+" use multiple of shiftwidth when indenting with '<' and '>'
+set shiftround

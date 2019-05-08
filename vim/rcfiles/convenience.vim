@@ -132,6 +132,9 @@ nnoremap          <M-,>         <C-w><lt>
 " Increase current window width by 1
 nnoremap          <M-.>         <C-w>>
 
+" resize window width szie to 80
+nnoremap          <M-\>         :vertical resize 80<CR>
+
 " }}}
 
 " Opening and closing a window {{{
@@ -197,3 +200,29 @@ inoremap          <BS>          <nop>
 cnoremap          <BS>          <nop>
 inoremap          <S-BS>        <nop>
 cnoremap          <S-BS>        <nop>
+
+" TODO: understand and reorder the following key mapping
+" Start new line from any cursor position
+inoremap          <S-Return>    <C-o>o
+" Quick substitute within selected area
+xnoremap          s             :s//g<Left><Left>
+nnoremap          zl            z5l
+nnoremap          zh z5h
+
+nnoremap <C-x> <C-w>x<C-w>w
+
+" Tabs
+nnoremap <silent> g0            :<C-u>tabfirst<CR>
+nnoremap <silent> g$            :<C-u>tablast<CR>
+nnoremap <silent> gr            :<C-u>tabprevious<CR>
+nnoremap <silent> <A-j>         :<C-U>tabnext<CR>
+nnoremap <silent> <A-k>         :<C-U>tabprevious<CR>
+nnoremap <silent> <C-Tab>       :<C-U>tabnext<CR>
+nnoremap <silent> <C-S-Tab>     :<C-U>tabprevious<CR>
+
+" Duplicate lines
+nnoremap          <Leader>d     m`YP``
+vnoremap          <Leader>d     YPgv
+
+nnoremap          <leader>tx    :tabclose<CR>
+nnoremap          <leader>tc    :tabclose<CR>
