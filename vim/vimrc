@@ -13,6 +13,9 @@ set nocompatible
 " viminfo file, etc.
 set encoding=utf-8
 
+" Disable space in normal mode
+nnoremap          <Space>       <nop>
+
 " Need to set the leader before defining any leader mappings
 let mapleader = "\<Space>"
 

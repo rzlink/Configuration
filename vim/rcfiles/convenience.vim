@@ -63,11 +63,31 @@ nnoremap <silent> <Leader>lc    :lcd %:h<CR>
 
 "}}}
 
-" SPELL CHECK {{{
-nnoremap <silent> <Leader>s     :setlocal spell<CR>
-                               \:setlocal spelllang=en<CR>
+" TOGGLE OPTION {{{
 
-nnoremap <silent> <Leader>ns    :setlocal nospell<CR>
+" Toggle spell checker
+nnoremap <silent> <Leader>ts    :setlocal spell!<CR>
+
+" Toggle hidden characters (:setlocal nolist!)
+nnoremap <silent> <Leader>tl    :setlocal list!<CR>
+
+" Toggle wrap (:setlocal wrap! breakindent!)
+nnoremap <silent> <Leader>tw    :setlocal wrap!<CR>
+
+" Toggle menu bar
+nnoremap <silent> <Leader>Tm    :if &guioptions=~#'m'<Bar>set guioptions-=m<Bar>
+                                \else<Bar>set guioptions+=m<Bar>
+                                \endif<CR>
+
+" Toggle tool bar
+nnoremap <silent> <Leader>Tt    :if &guioptions=~#'T'<Bar>set guioptions-=T<Bar>
+                                \else<Bar>set guioptions+=T<Bar>
+                                \endif<CR>
+
+" Toggle Right-hand scrollbar
+nnoremap <silent> <Leader>Tr    :if &guioptions=~#'r'<Bar>set guioptions-=r<Bar>
+                                \else<Bar>set guioptions+=r<Bar>endif<CR>
+
 "}}}
 
 " BUFFERS OPERATIONS {{{
@@ -153,6 +173,9 @@ nnoremap <silent> <Leader>qq    :qall<CR>
 
 "}}}
 
+" Quick exchange current window with next one
+nnoremap <C-x> <C-w>x<C-w>w
+
 "}}}
 
 " SEARCH {{{
@@ -207,25 +230,38 @@ cnoremap          <S-BS>        <nop>
 " TODO: understand and reorder the following key mapping
 " Start new line from any cursor position
 inoremap          <S-Return>    <C-o>o
-" Quick substitute within selected area
-xnoremap          s             :s//g<Left><Left>
+
+" Scroll 5 characters to the right
 nnoremap          zl            z5l
-nnoremap          zh z5h
 
-nnoremap <C-x> <C-w>x<C-w>w
+" Scroll 5 characters to the left
+nnoremap          zh            z5h
 
-" Tabs
-nnoremap <silent> g0            :<C-u>tabfirst<CR>
-nnoremap <silent> g$            :<C-u>tablast<CR>
+" TABS {{{
+
+" Go to tab by number
+noremap           <leader>1     1gt
+noremap           <leader>2     2gt
+noremap           <leader>3     3gt
+noremap           <leader>4     4gt
+noremap           <leader>5     5gt
+noremap           <leader>6     6gt
+noremap           <leader>7     7gt
+noremap           <leader>8     8gt
+noremap           <leader>9     9gt
+
+" Go to previous tab
 nnoremap <silent> gr            :<C-u>tabprevious<CR>
-nnoremap <silent> <A-j>         :<C-U>tabnext<CR>
-nnoremap <silent> <A-k>         :<C-U>tabprevious<CR>
-nnoremap <silent> <C-Tab>       :<C-U>tabnext<CR>
-nnoremap <silent> <C-S-Tab>     :<C-U>tabprevious<CR>
+
+nnoremap <silent> <C-Tab>       :<C-u>tabnext<CR>
+nnoremap <silent> <C-S-Tab>     :<C-u>tabprevious<CR>
+
+nnoremap          <leader>tx    :tabclose<CR>
+nnoremap          <leader>tc    :tabclose<CR>
+
+"}}}
 
 " Duplicate lines
 nnoremap          <Leader>d     m`YP``
 vnoremap          <Leader>d     YPgv
 
-nnoremap          <leader>tx    :tabclose<CR>
-nnoremap          <leader>tc    :tabclose<CR>
