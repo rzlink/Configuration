@@ -3,7 +3,6 @@
 Plug 'junegunn/vim-easy-align'
 
 command! ReformatTable normal vip<cr>**|
-nnoremap <silent> <Leader>wd    :close<CR>
 nmap              <leader>rt    :ReformatTable<cr>
 
 vmap              <cr>          <Plug>(EasyAlign)

@@ -56,7 +56,7 @@ cnoremap          <C-g>         <C-c>"}}}
 " CHANGE DIRECTORY {{{
 
 " change global directory to basename of current file
-nnoremap <silent> <Leader>c     :cd %:h<CR>
+nnoremap <silent> <Leader>gc    :cd %:h<CR>
 
 " change current buffer directory to basename of current file
 nnoremap <silent> <Leader>lc    :lcd %:h<CR>
@@ -172,9 +172,6 @@ nnoremap <silent> <Leader>wo    :only<CR>
 nnoremap <silent> <Leader>qq    :qall<CR>
 
 "}}}
-
-" Quick exchange current window with next one
-nnoremap <C-x> <C-w>x<C-w>w
 
 "}}}
 
