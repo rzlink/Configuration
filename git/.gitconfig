@@ -21,7 +21,7 @@
   path = gitalias.txt
 
 [alias]
-    logs = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=relative
+    logs = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cd) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=short
 
 [diff]
     tool = bc4
