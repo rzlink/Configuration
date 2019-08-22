@@ -43,6 +43,11 @@ set wildmode=list:full
 " patterns is ignored when completing file or directory names.
 set wildignore=*.swp,*.zip,*.exe,.git
 
+" Save swap, undo and backup file in the temp folder
+set directory=$TEMP,$TMP,.
+set backupdir=$TEMP,$TMP,.
+set undodir=$TEMP,$TMP,.
+
 " If on Vim will wrap long lines at a character in 'breakat' rather
 " than at the last character that fits on the screen.
 set linebreak
