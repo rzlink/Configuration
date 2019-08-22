@@ -23,36 +23,36 @@
 [alias]
     logs = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cd) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=short
 
-[diff]
-    tool = bc4
+#[diff]
+#    tool = bc4
+#
+#[difftool]
+#    prompt = false
+#
+#[difftool "kdiff3"]
+#    cmd = \"C:/Program Files/KDiff3/kdiff3\" $LOCAL $REMOTE
+#
+#[difftool "code"]
+#    cmd = code --wait --diff $LOCAL $REMOTE
+#
+#[difftool "bc4"]
+#    cmd = \"C:/Program Files/Beyond Compare 4/BComp.exe\" $LOCAL $REMOTE
+#
+#[difftool "winmerge"]
+#    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -e $LOCAL $REMOTE
 
-[difftool]
-    prompt = false
-
-[difftool "kdiff3"]
-    cmd = \"C:/Program Files/KDiff3/kdiff3\" $LOCAL $REMOTE
-
-[difftool "code"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-
-[difftool "bc4"]
-    cmd = \"C:/Program Files/Beyond Compare 4/BComp.exe\" $LOCAL $REMOTE
-
-[difftool "winmerge"]
-    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -e $LOCAL $REMOTE
-
-[merge]
-    tool = vimdiff3
-    conflictstyle = diff3
-
-[mergetool "kdiff3"]
-    cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" $BASE $LOCAL $REMOTE -o $MERGED
-    trustExitCode = false
-    keepBackup = false
-
-[mergetool "bc4"]
-    cmd = \"C:/Program Files/Beyond Compare 4/BComp.exe\" $LOCAL $REMOTE $BASE $MERGED
-
-[mergetool "vimdiff3"]
-    cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
-    prompt = false
+#[merge]
+#    tool = vimdiff3
+#    conflictstyle = diff3
+#
+#[mergetool "kdiff3"]
+#    cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" $BASE $LOCAL $REMOTE -o $MERGED
+#    trustExitCode = false
+#    keepBackup = false
+#
+#[mergetool "bc4"]
+#    cmd = \"C:/Program Files/Beyond Compare 4/BComp.exe\" $LOCAL $REMOTE $BASE $MERGED
+#
+#[mergetool "vimdiff3"]
+#    cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+#    prompt = false

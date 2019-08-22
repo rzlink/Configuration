@@ -257,8 +257,3 @@ nnoremap          <leader>tx    :tabclose<CR>
 nnoremap          <leader>tc    :tabclose<CR>
 
 "}}}
-
-" Duplicate lines
-nnoremap          <Leader>d     m`YP``
-vnoremap          <Leader>d     YPgv
-
