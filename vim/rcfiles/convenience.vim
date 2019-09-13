@@ -218,12 +218,6 @@ nnoremap <silent> <leader>W :%s/\s\+$//e<CR>:let @/=''<CR>:%s/\n\{3,}/\r\r/e<CR>
 
 "}}}
 
-" force use <C-h>, <C-u>, <C-w> to delete
-inoremap          <BS>          <nop>
-cnoremap          <BS>          <nop>
-inoremap          <S-BS>        <nop>
-cnoremap          <S-BS>        <nop>
-
 " TODO: understand and reorder the following key mapping
 " Start new line from any cursor position
 inoremap          <S-Return>    <C-o>o
