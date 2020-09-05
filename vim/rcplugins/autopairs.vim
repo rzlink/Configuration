@@ -2,4 +2,6 @@
 
 Plug 'jiangmiao/auto-pairs'
 
+let g:AutoPairsShortcutToggle = ''
+
 " vim:ft=vim
