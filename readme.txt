@@ -1,12 +1,20 @@
 In window using the following command to create symbolic.
 
 vim:
-mklink /D %HOMEPATH%\vimfiles D:\Github\dotfiles\vim
-mklink %HOMEPATH%\.gitconfig D:\GitHub\dotfiles\git\.gitconfig
+mklink /D %USERPROFILE%\vimfiles D:\Github\dotfiles\vim
+mklink %USERPROFILE%\vimrc D:\GitHub\dotfiles\vim\vimrc
 
 neo vim:
-mklink %LOCALAPPDATA%\nvim\init.vim D:\GitHub\dotfiles\nvim\init.vim
-mklink %HOMEDRIVE%%HOMEPATH%\vimrc D:\GitHub\dotfiles\vim\vimrc
+mklink /D %LOCALAPPDATA%\nvim D:\Github\dotfiles\vim
+
+Powershell:
+New-Item -ItemType SymbolicLink -Path C:\Users\davwe\AppData\Local\nvim -Target D:\Github\dotfiles\vim
+New-Item -ItemType SymbolicLink -Path C:\Users\davwe\AppData\Local\nvim\init.vim -Target D:\Github\dotfiles\vim\init.vim
+
 
 git:
-mklink %HOMEPATH%\gitalias.txt D:\GitHub\dotfiles\git\gitalias.txt
+mklink %USERPROFILE%\.gitconfig D:\GitHub\dotfiles\git\.gitconfig
+mklink %USERPROFILE%\gitalias.txt D:\GitHub\dotfiles\git\gitalias.txt
+
+Check Symlink
+dir /al /s | findstr "<SYMLINK"
