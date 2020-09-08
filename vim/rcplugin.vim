@@ -5,21 +5,6 @@ Plug 'tomasr/molokai'
 Plug 'rafi/awesome-vim-colorschemes'
 " }}}
 
-" FRAMEWORK{{{
-" Dark powered asynchronous completion framework for neovim/Vim8
-
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
-let g:deoplete#enable_at_startup = 1
-
-" }}}
-
 " NAVIGATION{{{
 " easymotion - simpler way to use some motions in vim
 Plug 'easymotion/vim-easymotion'
@@ -192,6 +177,11 @@ augroup LSP
     autocmd!
     autocmd FileType cpp,c,fsharp call SetLSPShortcuts()
 augroup END
+
+" }}}
+
+" 1.2 Code auto completion{{{
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " }}}
 
