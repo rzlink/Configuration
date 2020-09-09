@@ -115,7 +115,7 @@ nnoremap <leader><leader>       <c-^>
 " FILE OPERATIONS {{{
 
 " Open recent (show recent files)
-nnoremap <silent> <Leader>fr    :browse oldfiles<CR>
+" nnoremap <silent> <Leader>fr    :browse oldfiles<CR>
 
 " Copy current file path
 nnoremap <silent> <Leader>fy    :let @+ = expand("%:p")<CR>

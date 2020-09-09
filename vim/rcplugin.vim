@@ -88,6 +88,10 @@ nnoremap <silent> <leader>ut    :UndotreeToggle<cr>
 Plug 'tpope/vim-vinegar'
 " }}}
 
+" 1.11 Status line extracted from space-vim{{{
+Plug 'liuchengxu/eleline.vim'
+" }}}
+
 " }}}
 
 " GIT{{{
@@ -115,21 +119,21 @@ if executable('rg')
     "noremap <silent> <leader>he :Helptags<cr>
 
     " <C-p> to search files
-    nnoremap <silent> <C-p>         :Files<cr>
+    " nnoremap <silent> <C-p>         :Files<cr>
 
     " <M-p> for open buffers
-    nnoremap <silent> <M-p>         :Buffers<cr>
+    " nnoremap <silent> <M-p>         :Buffers<cr>
 
     " <M-S-p> for MRU
-    nnoremap <silent> <M-S-p>       :History<cr>
+    " nnoremap <silent> <M-S-p>       :History<cr>
 
     " Better command history with q:
-    command! CmdHist call fzf#vim#command_history({'right': '40'})
-    nnoremap          q:            :CmdHist<CR>
+    " command! CmdHist call fzf#vim#command_history({'right': '40'})
+    " nnoremap          q:            :CmdHist<CR>
 
     " Better search history
-    command! QHist call fzf#vim#search_history({'right': '40'})
-    nnoremap          q/            :QHist<CR>
+    " command! QHist call fzf#vim#search_history({'right': '40'})
+    " nnoremap          q/            :QHist<CR>
 
     " --column: Show column number
     " --line-number: Show line number
@@ -151,9 +155,18 @@ if executable('rg')
     command! -bang -nargs=* Find call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
     command! -bang -nargs=* Ack call fzf#vim#ag(<q-args>, {'down': '25%'})
 
-    nnoremap          <M-F>         :Ack<CR>
+    "nnoremap          <M-F>         :Ack<CR>
 
 endif
+
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!'  }
+" <C-p> to search files
+nnoremap <silent> <C-p>         :Clap files<cr>
+nnoremap <silent> <M-p>         :Clap buffers<cr>
+nnoremap          q:            :Clap command_history<CR>
+nnoremap          q/            :Clap search_history<CR>
+nnoremap <silent> <leader>fr    :Clap history<cr>
+nnoremap <silent> <C-Enter>     :Clap providers<cr>
 
 " }}}
 
