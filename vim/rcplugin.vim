@@ -3,6 +3,11 @@ Plug 'w0ng/vim-hybrid'
 Plug 'crusoexia/vim-monokai'
 Plug 'tomasr/molokai'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula'  }
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'arcticicestudio/nord-vim'
+
 " }}}
 
 " NAVIGATION{{{
