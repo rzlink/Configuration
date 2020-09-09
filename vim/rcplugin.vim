@@ -210,7 +210,7 @@ Plug 'Chiel92/vim-autoformat'
 " 2. Languages{{{
 " 2.1 F# support{{{
 Plug 'ionide/Ionide-vim', {
-            \ 'do':  'make fsautocomplete',
+            \ 'do': 'powershell -executionpolicy bypass -File install.ps1',
             \}
 
 " }}}
@@ -296,6 +296,9 @@ let g:ale_linters = {
 let g:ale_fixers = {
             \   'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8']
             \}
+
+let g:ale_set_quickfix = 1
+let g:ale_list_window_size = 5
 
 " }}}
 
