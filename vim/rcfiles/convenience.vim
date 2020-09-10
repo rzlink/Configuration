@@ -125,19 +125,19 @@ nnoremap <silent> <Leader>fy    :let @+ = expand("%:p")<CR>
 " WINDOW OPERATIONS {{{
 
 " Quick jumping between splits {{{
-map               <C-J>         <C-W>j
-map               <C-K>         <C-W>k
-map               <C-H>         <C-W>h
-map               <C-L>         <C-W>l
+" map               <C-J>         <C-W>j
+" map               <C-K>         <C-W>k
+" map               <C-H>         <C-W>h
+" map               <C-L>         <C-W>l
 "}}}
 
 " Window split {{{
 
 " Split window below
-nnoremap <silent> <Leader>w-    <C-w><C-s>
+" nnoremap <silent> <Leader>w-    <C-w><C-s>
 
 " Split window to right
-nnoremap <silent> <Leader>w/    <c-w><c-v>
+" nnoremap <silent> <Leader>w/    <c-w><c-v>
 
 "}}}
 
@@ -153,10 +153,10 @@ nnoremap          <M-=>         <C-w>=
 nnoremap          <M-,>         <C-w><lt>
 
 " Increase current window width by 1
-nnoremap          <M-.>         <C-w>>
+" nnoremap          <M-.>         <C-w>>
 
 " resize window width szie to 80
-nnoremap          <M-\>         :vertical resize 80<CR>
+" nnoremap          <M-\>         :vertical resize 80<CR>
 
 " }}}
 
