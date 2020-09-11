@@ -48,6 +48,9 @@ set directory=$TEMP,$TMP,.
 set backupdir=$TEMP,$TMP,.
 set undodir=$TEMP,$TMP,.
 
+" disable the swap file
+set noswapfile
+
 " If on Vim will wrap long lines at a character in 'breakat' rather
 " than at the last character that fits on the screen.
 set linebreak
