@@ -26,3 +26,5 @@ runtime rcplugin.vim
 call plug#end()
 
 runtime! rcfiles/*.vim
+
+colorscheme molokai

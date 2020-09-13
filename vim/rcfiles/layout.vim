@@ -62,11 +62,8 @@ set cursorcolumn
 " Always dispaly status line
 set laststatus=2
 
-if has('gui_running')
-    colorscheme molokai
-elseif exists('+termguicolors')
+if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
-    colorscheme molokai
 endif

@@ -35,6 +35,7 @@ nmap     <silent> <Leader>jw    <Plug>(easymotion-overwin-w)
 " }}}
 
 " MISCELLANEOUS{{{
+
 " 1.1 Insert or delete brackets, parens, quotes in pair{{{
 Plug 'jiangmiao/auto-pairs'
 
@@ -201,7 +202,9 @@ augroup END
 " }}}
 
 " 1.2 Code auto completion{{{
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+if !has('win32unix')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
 
 " }}}
 
