@@ -1,4 +1,5 @@
-set number
-set runtimepath^=~/.vim
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+
 let &packpath = &runtimepath
-source ~/vimrc
+
+source vimrc
