@@ -19,9 +19,8 @@ nnoremap          <Space>       <nop>
 " Need to set the leader before defining any leader mappings
 let mapleader = "\<Space>"
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim_plugin_data')
 
-" runtime! rcplugins/*.vim
 runtime rcplugin.vim
 
 call plug#end()

@@ -89,7 +89,7 @@ Plug 'tpope/vim-vinegar'
 " }}}
 
 " 1.11 Status line extracted from space-vim{{{
-Plug 'liuchengxu/eleline.vim'
+"Plug 'liuchengxu/eleline.vim'
 " }}}
 
 " }}}
