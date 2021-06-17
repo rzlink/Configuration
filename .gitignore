@@ -4,3 +4,5 @@ f*.swp
 emacs/elpa/**
 emacs/server/**
 auto-save-list
+\#*\#
+.#*
