@@ -1,3 +1,5 @@
-*.swp
+f*.swp
 .netrwhist
 *.swo
+emacs/elpa/**
+emacs/server/**
