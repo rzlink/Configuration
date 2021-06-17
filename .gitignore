@@ -3,3 +3,4 @@ f*.swp
 *.swo
 emacs/elpa/**
 emacs/server/**
+auto-save-list
