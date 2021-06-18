@@ -3,6 +3,7 @@ f*.swp
 *.swo
 emacs/elpa/**
 emacs/server/**
+emacs/recentf
 auto-save-list
 \#*\#
 .#*
