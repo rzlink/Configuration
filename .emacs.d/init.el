@@ -1,4 +1,5 @@
 ;; Initialize package sources
+(require 'cl-lib)
 (require 'package)
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
@@ -6,27 +7,28 @@
                          ("elpa" . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
-(unless package-archive-contents
-   (package-refresh-contents))
 
-;; Initialize use-package on non-Linux platforms
-(unless (package-installed-p 'use-package)
-   (package-install 'use-package))
+(defvar my-packages
+  '(swiper
+    counsel
+    company
+    which-key
+    monokai-theme
+    zenburn-theme)
+  "A list of packages to ensure are installed at launch.")
 
-(require 'use-package)
-(setq use-package-always-ensure t)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(avy counsel swiper monokai-theme company)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(defun my-packages-installed-p ()
+  (cl-loop for p in my-packages
+           when (not (package-installed-p p)) do (cl-return nil)
+           finally (cl-return t)))
+
+(unless (my-packages-installed-p)
+  ;; check for new packages (package versions)
+  (package-refresh-contents)
+  ;; install the missing packages
+  (dolist (p my-packages)
+    (when (not (package-installed-p p))
+      (package-install p))))
 
 (setq inhibit-startup-message t)
 
@@ -53,9 +55,8 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+(setq monokai-background "#1F1F1F")
 (load-theme 'monokai t)
-;;(setq monokai-background "#1F1F1F")
-(set-background-color "#1B1D1F")
 
 ;; highlight the parenparence
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
@@ -72,6 +73,6 @@
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "c-h f") 'counsel-describe-function)
-(global-set-key (kbd "c-h v") 'counsel-describe-variable)
-(global-set-key (kbd "c-h o") 'counsel-describe-symbol)
+(global-set-key (kbd "C-h f") 'counsel-describe-function)
+(global-set-key (kbd "C-h v") 'counsel-describe-variable)
+(global-set-key (kbd "C-h o") 'counsel-describe-symbol)
