@@ -1,9 +1,9 @@
 f*.swp
 .netrwhist
 *.swo
-emacs/elpa/**
-emacs/server/**
-emacs/recentf
+.emacs.d/elpa/**
+.emacs.d/server/**
+.emacs.d/recentf
 auto-save-list
 \#*\#
 .#*
