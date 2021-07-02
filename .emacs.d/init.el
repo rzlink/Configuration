@@ -1,35 +1,26 @@
 ;; Initialize package sources
 (require 'cl-lib)
-(require 'package)
 
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("org" . "https://orgmode.org/elpa/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-(package-initialize)
-
-(defvar my-packages
-  '(swiper
-    counsel
-    company
-    which-key
-    elpy
-    monokai-theme
-    zenburn-theme)
-  "A list of packages to ensure are installed at launch.")
-
-(defun my-packages-installed-p ()
-  (cl-loop for p in my-packages
-           when (not (package-installed-p p)) do (cl-return nil)
-           finally (cl-return t)))
-
-(unless (my-packages-installed-p)
-  ;; check for new packages (package versions)
-  (package-refresh-contents)
-  ;; install the missing packages
-  (dolist (p my-packages)
-    (when (not (package-installed-p p))
-      (package-install p))))
+(straight-use-package 'swiper)
+(straight-use-package 'counsel)
+(straight-use-package 'company)
+(straight-use-package 'which-key)
+(straight-use-package 'elpy)
+(straight-use-package 'monokai-theme)
+(straight-use-package 'zenburn-theme)
 
 (setq inhibit-startup-message t)
 
