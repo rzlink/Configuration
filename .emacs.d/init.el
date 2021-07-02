@@ -13,6 +13,7 @@
     counsel
     company
     which-key
+    elpy
     monokai-theme
     zenburn-theme)
   "A list of packages to ensure are installed at launch.")
@@ -43,6 +44,7 @@
 (setq make-backup-files nil); disable the backup file
 ;; Set Up the visible bell
 (setq visible-bell t)
+(elpy-enable)
 
 (require 'org)
 (setq org-src-fontify-natively t)
@@ -63,6 +65,12 @@
 (global-hl-line-mode t)
 
 (global-company-mode t)
+
+
+(require 'which-key)
+(setq which-key-idle-delay 10000)
+(setq which-key-idle-secondary-delay 0.05)
+(which-key-mode)
  
 (ivy-mode)
 (setq ivy-use-virtual-buffers t)

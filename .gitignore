@@ -4,6 +4,7 @@ f*.swp
 .emacs.d/elpa/**
 .emacs.d/server/**
 .emacs.d/recentf
+.emacs.d/elpy
 auto-save-list
 \#*\#
 .#*
