@@ -18,6 +18,8 @@
 (straight-use-package 'counsel)
 (straight-use-package 'company)
 (straight-use-package 'which-key)
+(straight-use-package 'evil)
+(straight-use-package 'magit)
 (straight-use-package 'elpy)
 (straight-use-package 'monokai-theme)
 (straight-use-package 'zenburn-theme)
