@@ -102,8 +102,8 @@ Plug 'tpope/vim-fugitive'
 "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
-if !has('win32unix')
-    Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
+if has('win32')
     let g:gitgutter_git_executable = 'C:\Program Files\Git\bin\git.exe'
 endif
 
