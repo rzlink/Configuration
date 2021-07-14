@@ -42,13 +42,14 @@
 (use-package counsel
   :diminish
   :bind (
-	 ("C-s" . swiper)
-	 ("C-x b" . ivy-switch-buffer)
-	 ("M-x" . counsel-M-x)
-	 ("C-x C-f" . counsel-find-file)
-	 ("C-h f" . counsel-describe-function)
-	 ("C-h v" . counsel-describe-variable)
-	 ("C-h o" . counsel-describe-symbol)
+         ("C-s" . swiper)
+         ("C-x b" . ivy-switch-buffer)
+         ("M-x" . counsel-M-x)
+         ("M-y" . counsel-yank-pop)
+         ("C-x C-f" . counsel-find-file)
+         ("C-h f" . counsel-describe-function)
+         ("C-h v" . counsel-describe-variable)
+         ("C-h o" . counsel-describe-symbol)
          :map ivy-minibuffer-map
          ("C-j" . ivy-next-line)
          ("C-k" . ivy-previous-line)
@@ -96,13 +97,13 @@
 
 ;; Disable line numbers for some modes
 (dolist (mode '(org-mode-hook
-		term-mode-hook
-		shell-mode-hook
-		eshell-mode-hook))
+                term-mode-hook
+                shell-mode-hook
+                eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 (menu-bar-mode -1)          ; Disable the menu bar
-
+(set-face-attribute 'default nil :family "Consolas" :height 110)
 (delete-selection-mode t)
 
 (setq make-backup-files nil); disable the backup file
