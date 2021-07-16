@@ -104,7 +104,11 @@ Plug 'tpope/vim-fugitive'
 " A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
 Plug 'airblade/vim-gitgutter'
 if has('win32')
-    let g:gitgutter_git_executable = 'C:\Program Files\Git\bin\git.exe'
+    if filereadable('C:/Program Files/Git/bin/git.exe')
+        let g:gitgutter_git_executable = 'C:/Program Files/Git/bin/git.exe'
+    elseif filereadable('C:/Users/davwei/scoop/shims/git.exe')
+        let g:gitgutter_git_executable = 'C:/Users/davwei/scoop/shims/git.exe'
+    endif
 endif
 
 " }}}
